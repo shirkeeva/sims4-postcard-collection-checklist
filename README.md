@@ -1,6 +1,9 @@
 # sims4-postcard-collection-checklist
 
-This template should help get you started developing with Vue 3 in Vite.
+Vue app which helps to keep track on collection of postcards in the game The Sims 4
+
+![изображение](https://github.com/shirkeeva/sims4-postcard-collection-checklist/assets/58703112/995b152b-1508-4c87-a0ef-e2476a2f24c5)
+
 
 ## Recommended IDE Setup
 
