@@ -3,9 +3,9 @@
       <img src="./assets/Sims4Logo.png" alt="">
       <h1>Postcards Collection Checklist</h1>
     </div>
-    <Postcards v-if="postcardsHeader.length && postcardList.length" 
+    <Postcards v-if="postcardsHeader.length && postcardsList.length" 
                  :postcardsHeader="postcardsHeader" 
-                 :postcardList="postcardList" />
+                 :postcardsList="postcardsList" />
 </template>
   
 <script lang="ts">
@@ -24,20 +24,22 @@ components: {
 },
 setup() {
     const postcardsHeader = ref<string[]>([]);
-    const postcardList = ref<string[]>([]);
+    const postcardsList = ref<string[]>([]);
 
     onMounted(async () => {
+        document.title = "Sims 4 Postcards Collection Checklist";
+
         const response = await fetch('/postcards-list.json');
         const data: PostcardsData[] = await response.json();
         if (data.length > 0) {
             postcardsHeader.value = data[0].header;
-            postcardList.value = data[0].postcards;
+            postcardsList.value = data[0].postcards;
         }
     });
 
     return {
         postcardsHeader,
-        postcardList
+        postcardsList
     };
 }
 });

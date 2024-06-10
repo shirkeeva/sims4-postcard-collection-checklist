@@ -8,7 +8,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(postcard, pIndex) in postcardList" :key="pIndex" :class="{'done': isDone(pIndex)}">
+          <tr v-for="(postcard, pIndex) in postcardsList" :key="pIndex" :class="{'done': isDone(pIndex)}">
             <td v-for="index in (postcardsHeader.length + 1)"  :key="index">
                 <p v-if="index === 1">{{ postcard }}</p>
                 <label v-else class="custom-checkbox">
@@ -36,14 +36,14 @@ export default defineComponent({
       type: Array,
       required: true
     },
-    postcardList: {
+    postcardsList: {
       type: Array,
       required: true
     }
   },
   setup(props) {
     const checkboxStates = reactive(
-      props.postcardList.map(() => Array(props.postcardsHeader.length).fill(false))
+      props.postcardsList.map(() => Array(props.postcardsHeader.length).fill(false))
     );
 
     const handleCheckboxChange = (pIndex: number, hIndex: number, e: Event) => {
