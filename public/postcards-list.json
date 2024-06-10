@@ -1,0 +1,26 @@
+[
+    {
+        "header": [
+            "Find a Pen Pal",
+            "Write to the Pen Pal",
+            "Ask for a Postcard",
+            "Get the Postcard"
+        ],
+        "postcards": [
+            "Appaloosa",
+            "Bridgeport",
+            "Littlehaven",
+            "Lucky Palms",
+            "Moonlight Falls",
+            "Riverview",
+            "Sunset Valley",
+            "Twinbrook",
+            "Barnacle Bay",
+            "Champs Les Sims",
+            "Lunar Lakes",
+            "Midnight Hollow",
+            "Dragon Valley",
+            "Isla Paradiso"
+        ]
+    }
+]
